@@ -33,7 +33,7 @@ function Dashboard() {
         if (searchQuery) query.append('search', searchQuery);
         if (sortBy) query.append('sortby', sortBy);
 
-        const { data } = await axios.get(`http://localhost:5001/api/tasks?${query.toString()}`, config);
+        const { data } = await axios.get(`https://task-manger-qfb9.onrender.com/api/tasks?${query.toString()}`, config);
         setTasks(data);
       } catch (error) {
         console.error('Failed to fetch tasks', error);
@@ -54,7 +54,7 @@ function Dashboard() {
   const handleTaskDeleted = async (id) => {
     try {
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
-      await axios.delete(`http://localhost:5001/api/tasks/${id}`, config);
+      await axios.delete(`https://task-manger-qfb9.onrender.com/api/tasks/${id}`, config);
       setTasks(prev => prev.filter(t => t._id !== id));
     } catch (error) {
       console.error(error);
@@ -65,7 +65,7 @@ function Dashboard() {
     const newStatus = task.status === 'completed' ? 'pending' : 'completed';
     try {
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
-      const { data } = await axios.put(`http://localhost:5001/api/tasks/${task._id}`, { ...task, status: newStatus }, config);
+      const { data } = await axios.put(`https://task-manger-qfb9.onrender.com/api/tasks/${task._id}`, { ...task, status: newStatus }, config);
       setTasks(prev => prev.map(t => t._id === data._id ? data : t));
     } catch (error) {
       console.error(error);
@@ -94,7 +94,7 @@ function Dashboard() {
       try {
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
         const taskToUpdate = tasks.find(t => t._id === draggableId);
-        await axios.put(`http://localhost:5001/api/tasks/${draggableId}`, { ...taskToUpdate, status: newStatus }, config);
+        await axios.put(`https://task-manger-qfb9.onrender.com/api/tasks/${draggableId}`, { ...taskToUpdate, status: newStatus }, config);
       } catch (error) {
         console.error(error);
       }

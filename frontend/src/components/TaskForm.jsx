@@ -19,7 +19,7 @@ function TaskForm({ onTaskAdded }) {
       const config = {
         headers: { Authorization: `Bearer ${user.token}` }
       };
-      const { data } = await axios.post('http://localhost:5001/api/tasks', {
+      const { data } = await axios.post('https://task-manger-qfb9.onrender.com/api/tasks', {
         title,
         description,
         priority,
