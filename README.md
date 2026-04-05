@@ -84,3 +84,8 @@ The application will be running at `http://localhost:5173` and the backend API a
 ## Deployment Readiness
 - **Frontend (Vercel):** The Vite project is configured and ready to be deployed to Vercel instantly. Make sure to configure the `VITE_API_URL` if you refactor the endpoints to use an environment variable.
 - **Backend (Render/Railway):** The `start` script is added. Just configure the environment variables on Render, and it is ready to go live.
+
+
+
+LIVE URL:-
+task-manger-eta-six.vercel.app
