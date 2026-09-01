@@ -12,7 +12,7 @@ A modern, production-ready full-stack task management application built with the
 
 ## Screenshots
 
-*(Placeholder for Screenshots)*
+
 - Login/Signup screen
 - Dashboard light mode
 - Dashboard dark mode
