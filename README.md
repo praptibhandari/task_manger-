@@ -1,3 +1,4 @@
+
 # Full Stack Task Manager Application
 
 A modern, production-ready full-stack task management application built with the MERN stack (MongoDB, Express, React, Node.js) and styled with Tailwind CSS.
@@ -9,13 +10,6 @@ A modern, production-ready full-stack task management application built with the
 - **Drag and Drop:** Easily drag and drop tasks between 'Pending' and 'Completed' columns to update their status instantly.
 - **Advanced Filtering & Sorting:** Filter tasks by status (all/pending/completed), search by title, and sort by due date, created date, or priority.
 - **Modern UI:** Responsive, clean interface designed with Tailwind CSS, supporting dark mode out of the box.
-
-## Screenshots
-
-
-- Login/Signup screen
-- Dashboard light mode
-- Dashboard dark mode
 
 ## Tech Stack
 
